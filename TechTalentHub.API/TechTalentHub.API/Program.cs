@@ -1,8 +1,17 @@
+using Microsoft.EntityFrameworkCore;
 using Serilog;
+using TechTalentHub.API.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+var conectionString = builder.Configuration.GetConnectionString("TechTalentHubDbConnectionString");
+builder.Services.AddDbContext<TechTalentHubDbContext>(options =>
+{
+    options.UseSqlServer(conectionString);
+});
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
