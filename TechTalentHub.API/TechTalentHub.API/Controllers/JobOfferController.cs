@@ -17,7 +17,7 @@ namespace TechTalentHub.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<JobOfferController>> AddJob(JobOffer jobOffer)
+        public async Task<ActionResult<JobOffer>> AddJob(JobOffer jobOffer)
         {
             await _uow.JobOfferRepo.InsertAsync(jobOffer);
             await _uow.SaveChangesAsync();
