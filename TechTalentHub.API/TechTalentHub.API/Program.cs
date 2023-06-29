@@ -7,6 +7,7 @@ using Serilog;
 using System.Text;
 using TechTalentHub.API.Configurations;
 using TechTalentHub.API.Data;
+using TechTalentHub.API.Models;
 using TechTalentHub.API.Services;
 using TechTalentHub.API.Services.Contracts;
 
@@ -14,10 +15,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-var conectionString = builder.Configuration.GetConnectionString("TechTalentHubDbConnectionString");
+var connectionString = builder.Configuration.GetConnectionString("TechTalentHubDbConnectionString");
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IRepo<JobOffer>, DataRepository<JobOffer>>();
 builder.Services.AddDbContext<TechTalentHubDbContext>(options =>
 {
-    options.UseSqlServer(conectionString);
+    options.UseSqlServer(connectionString);
 });
 
 
