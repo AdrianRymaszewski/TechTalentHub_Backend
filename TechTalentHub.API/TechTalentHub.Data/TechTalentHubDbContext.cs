@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TechTalentHub.API.Models;
 
 namespace TechTalentHub.API.Data
 {
@@ -9,7 +8,5 @@ namespace TechTalentHub.API.Data
         {
             
         }
-
-        public DbSet<JobOffer> JobOffer { get; set; } = null;
     }
 }

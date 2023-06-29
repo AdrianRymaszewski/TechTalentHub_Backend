@@ -1,15 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using TechTalentHub.API.Data;
+using TechTalentHub.API.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-var conectionString = builder.Configuration.GetConnectionString("TechTalentHubDbConnectionString");
+var connectionString = builder.Configuration.GetConnectionString("TechTalentHubDbConnectionString");
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IRepo<JobOffer>, DataRepository<JobOffer>>();
 builder.Services.AddDbContext<TechTalentHubDbContext>(options =>
 {
-    options.UseSqlServer(conectionString);
+    options.UseSqlServer(connectionString);
 });
 
 
