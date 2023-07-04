@@ -451,3 +451,8 @@ MigrationBackup/
 # End of https://www.gitignore.io/api/visualstudio,jetbrains+all,visualstudiocode
 
 /TechTalentHub.API/TechTalentHub.API/logs
+/TechTalentHub.API/TechTalentHub.API/.config/dotnet-tools.json
+/TechTalentHub.API/TechTalentHub.API/Properties/ServiceDependencies/TechTalentHubAPI-V2 - Web Deploy/mssql3.arm.json
+/TechTalentHub.API/TechTalentHub.API/Properties/ServiceDependencies/TechTalentHubAPI-V2 - Web Deploy/profile.arm.json
+/TechTalentHub.API/TechTalentHub.API/Properties/serviceDependencies.json
+/TechTalentHub.API/TechTalentHub.API/Properties/serviceDependencies.TechTalentHubAPI-V2 - Web Deploy.json
