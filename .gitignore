@@ -456,3 +456,8 @@ MigrationBackup/
 /TechTalentHub.API/TechTalentHub.API/Properties/ServiceDependencies/TechTalentHubAPI-V2 - Web Deploy/profile.arm.json
 /TechTalentHub.API/TechTalentHub.API/Properties/serviceDependencies.json
 /TechTalentHub.API/TechTalentHub.API/Properties/serviceDependencies.TechTalentHubAPI-V2 - Web Deploy.json
+/TechTalentHub.API/TechTalentHub.API/Migrations/20230704183359_AddCV.cs
+/TechTalentHub.API/TechTalentHub.API/Migrations/20230704183359_AddCV.Designer.cs
+/TechTalentHub.API/TechTalentHub.API/Migrations/20230704183859_FixCV.cs
+/TechTalentHub.API/TechTalentHub.API/Migrations/20230704183859_FixCV.Designer.cs
+/TechTalentHub.API/TechTalentHub.API/Migrations/TechTalentHubDbContextModelSnapshot.cs
