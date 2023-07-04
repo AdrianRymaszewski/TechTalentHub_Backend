@@ -8,6 +8,7 @@ using System.Text;
 using TechTalentHub.API.Configurations;
 using TechTalentHub.API.Data;
 using TechTalentHub.API.Models;
+using TechTalentHub.API.Models.CurriculumVitae;
 using TechTalentHub.API.Services;
 using TechTalentHub.API.Services.Contracts;
 
@@ -18,6 +19,7 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("TechTalentHubDbConnectionString");
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IRepo<JobOffer>, DataRepository<JobOffer>>();
+builder.Services.AddScoped<IRepo<CurriculumVitae>, DataRepository<CurriculumVitae>>();
 builder.Services.AddDbContext<TechTalentHubDbContext>(options =>
 {
     options.UseSqlServer(connectionString);

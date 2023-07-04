@@ -1,4 +1,5 @@
 ﻿using TechTalentHub.API.Models;
+using TechTalentHub.API.Models.CurriculumVitae;
 
 namespace TechTalentHub.API.Data
 {
@@ -6,14 +7,16 @@ namespace TechTalentHub.API.Data
     {
         private readonly TechTalentHubDbContext _ctx;
 
-        public UnitOfWork(TechTalentHubDbContext ctx, IRepo<JobOffer> jobOfferRepo)
+        public UnitOfWork(TechTalentHubDbContext ctx, IRepo<JobOffer> jobOfferRepo,IRepo<CurriculumVitae> curriculumVitaeRepo)
         {
             _ctx = ctx;
             JobOfferRepo = jobOfferRepo;
+            CurriculumVitaeRepo = curriculumVitaeRepo;
         }
 
 
         public IRepo<JobOffer> JobOfferRepo { get; }
+        public IRepo<CurriculumVitae> CurriculumVitaeRepo { get; }
 
         public async Task SaveChangesAsync()
         {
